@@ -20,15 +20,15 @@
 
 ##### Spielfunktion
 
-1. die class _meinWidget_ enthält den grundlegenden Fensteraufbau mit den Start-, Stop-, Save-, Load- und Leave-Buttons.
+1. die class ``meinWidget`` enthält den grundlegenden Fensteraufbau mit den Start-, Stop-, Save-, Load- und Leave-Button.
 
-2. die class _zeichenFeld_ 
-+ In zeichenFeld::paintEvent(QPaintEvent *event) wird der Avatar, die herunterfallenden Objekte, die Lifes und der Punktecounter eingefügt
-+ spielFeld::serialize(QFile &file) und spielFeld::deserialize(QFile &file) 
-+ Für das Speichern und Laden eines Savegame: Bringen Daten zur Position aller Elemente, den Punktestand und die Anzahl der Leben in serielle (und human-readable) Form und extrahieren aus diesen seriellen Daten wieder alle Informationen für das Spiel
-+ In zeichenFeld::updateObjects() werden die Objekte über einen QTimer durch das Spielfeld bewegt  
-+ In zeichenFeld::HitRegistration() überprüft das Programm, ob die Objekte mit dem Avatar kollidieren
-+ Durch die Funktion zeichenFeld::keyPressEvent(QKeyEvent *event) achtet das Programm auf den Druck der Pfeiltasten Links und Rechts, sodass der Avatar sich bewegen kann
+2. die class ``zeichenFeld`` enthält: 
++ In ``zeichenFeld::paintEvent(QPaintEvent *event)`` wird der Avatar, die herunterfallenden Objekte, die Lifes und der Punktecounter eingefügt
++ ``spielFeld::serialize(QFile &file) und spielFeld::deserialize(QFile &file)`` 
+Für das Speichern und Laden eines Savegame: Bringen Daten zur Position aller Elemente, den Punktestand und die Anzahl der Leben in serielle (und human-readable) Form und extrahieren aus diesen seriellen Daten wieder alle Informationen für das Spiel
++ In ``zeichenFeld::updateObjects()`` werden die Objekte über einen QTimer durch das Spielfeld bewegt  
++ In ``zeichenFeld::HitRegistration()`` überprüft das Programm, ob die Objekte mit dem Avatar kollidieren
++ Durch die Funktion ``zeichenFeld::keyPressEvent(QKeyEvent *event)`` achtet das Programm auf den Druck der Pfeiltasten Links und Rechts, sodass der Avatar sich bewegen kann
 
 
 
