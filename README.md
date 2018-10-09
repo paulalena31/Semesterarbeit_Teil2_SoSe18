@@ -23,7 +23,7 @@
 1. die class ``meinWidget`` enthält den grundlegenden Fensteraufbau mit den Start-, Stop-, Save-, Load- und Leave-Button.
 
 2. die class ``zeichenFeld`` enthält: 
-+ In ``zeichenFeld::paintEvent(QPaintEvent *event)`` wird der Avatar, die herunterfallenden Objekte, die Lifes und der Punktecounter eingefügt
++ In ``zeichenFeld::paintEvent(QPaintEvent *event)`` wird der Avatar, die herunterfallenden Objekte, die Lebensanzeigen und der Punktezähler eingefügt
 + ``spielFeld::serialize(QFile &file) und spielFeld::deserialize(QFile &file)`` 
 Für das Speichern und Laden eines Savegame: Bringen Daten zur Position aller Elemente, den Punktestand und die Anzahl der Leben in serielle (und human-readable) Form und extrahieren aus diesen seriellen Daten wieder alle Informationen für das Spiel
 + In ``zeichenFeld::updateObjects()`` werden die Objekte über einen QTimer durch das Spielfeld bewegt  
